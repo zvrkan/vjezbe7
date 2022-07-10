@@ -1,0 +1,35 @@
+<?php
+
+// Toster.php
+
+class Toster
+{
+    protected $max_br_kriska;
+    protected $kriske = array();
+
+    function __construct()
+    {
+        $this->max_br_kriska = 2;
+    }
+
+    function ubaciKrisku($kriska)
+    {
+        if(count($this->kriske) < $this->max_br_kriska)
+        {
+            $this->kriske[] = $kriska; 
+        }
+    }
+
+    function tostiraj()
+    {
+        if(is_array($this->kriske))
+        {
+            foreach($this->kriske as $key => $kriska)
+            {
+                echo ($key + 1) . ". Tostiram " . $kriska . "\n";
+            }
+        }
+    }
+}
+
+?>
