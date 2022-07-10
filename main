@@ -1,0 +1,11 @@
+<?php
+
+// MAIN
+include("PozivNaBroj.php");
+include("Provjera.php");
+
+$broj = new PozivNaBroj();
+
+$provjera = new Provjera($broj);
+
+?>
