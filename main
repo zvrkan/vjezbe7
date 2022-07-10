@@ -1,11 +1,18 @@
 <?php
 
-// MAIN
-include("PozivNaBroj.php");
-include("Provjera.php");
+// main.php
 
-$broj = new PozivNaBroj();
+include("Toster.php");
+include("TosterPro.php");
 
-$provjera = new Provjera($broj);
+$toster = new TosterPro();
+
+$toster->ubaciKrisku('kruh');
+$toster->ubaciKrisku('pecivo');
+$toster->ubaciKrisku('kruh');
+$toster->ubaciKrisku('kruh');
+$toster->ubaciKrisku('kruh');
+
+$toster->tostiraj();
 
 ?>
