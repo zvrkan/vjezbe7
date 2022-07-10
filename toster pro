@@ -1,0 +1,26 @@
+<?php
+
+// TosterPro.php
+
+class TosterPro extends Toster
+{
+    function __construct()
+    {
+        //parent::__construct();
+
+        $this->max_br_kriska = 4;
+    }
+
+    function tostirajExtra()
+    {
+        if(is_array($this->kriske))
+        {
+            foreach($this->kriske as $key => $kriska)
+            {
+                echo ($key + 1) . ". Tostiram " . $kriska . " Extra Hrskavo\n";
+            }
+        }        
+    }
+}
+
+?>
